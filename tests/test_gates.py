@@ -109,3 +109,26 @@ class TestECD:
         N = 10
         with pytest.raises(ValueError):
             ecd_circuit(N, betas=[1.0, 0.5], alphas=[0.1])  # wrong length
+
+
+class TestECDDecomposition:
+    def test_ecd_reset_sequence_product_matches_operator(self):
+        """ecd_qubit_reset_sequence product must match ecd_operator up to global phase."""
+        try:
+            from bosonic_gates.gates.ecd import ecd_qubit_reset_sequence
+        except ImportError:
+            pytest.skip("ecd_qubit_reset_sequence not available")
+
+        from bosonic_gates.gates.ecd import ecd_operator
+
+        N = 4
+        beta = 1.0 + 0.5j
+        ops = ecd_qubit_reset_sequence(N, beta)
+        U_composed = ops[0]
+        for op in ops[1:]:
+            U_composed = op * U_composed
+        U_direct = ecd_operator(N, beta)
+        # Compare up to global phase: |Tr(U†V)|/dim = 1 implies equal up to phase
+        d = 2 * N
+        fidelity = abs((U_composed.dag() * U_direct).tr()) / d
+        assert abs(fidelity - 1.0) < 1e-6
