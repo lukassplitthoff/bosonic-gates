@@ -1,0 +1,17 @@
+qutip>=5.0
+qutip-jax
+jax
+optax
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+ipywidgets>=8.0
+ipympl
+sympy
+
+[dev]
+pytest
+pytest-nbmake
+nbmake
+jupyter
+jupyterlab

@@ -33,7 +33,7 @@ def test_fock_state_orthonormality():
     s0 = fock_state(0, N=N)
     s3 = fock_state(3, N=N)
     assert abs(s0.state.dag() * s3.state) < 1e-12
-    assert abs((s3.state.dag() * s3.state).norm() - 1.0) < 1e-12
+    assert abs(abs(complex(s3.state.dag() * s3.state)) - 1.0) < 1e-12
 
 
 def test_fock_state_photon_number():

@@ -31,9 +31,9 @@ class TestSNAP:
         thetas[3] = np.pi
         psi_in = qt.basis(N, 3)
         psi_out = apply_snap(psi_in, thetas)
-        overlap = psi_in.dag() * psi_out
-        assert abs(abs(overlap[0][0][0]) - 1.0) < 1e-10
-        assert abs(np.angle(overlap[0][0][0]) - np.pi) < 1e-10
+        overlap = complex(psi_in.dag() * psi_out)
+        assert abs(abs(overlap) - 1.0) < 1e-10
+        assert abs(np.angle(overlap) - np.pi) < 1e-10
 
     def test_snap_identity(self):
         N = 6

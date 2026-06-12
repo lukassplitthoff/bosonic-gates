@@ -1,0 +1,179 @@
+Metadata-Version: 2.4
+Name: bosonic-gates
+Version: 0.1.0
+Summary: Tutorial notebooks and library for bosonic quantum computing with superconducting circuits
+License: MIT License
+        
+        Copyright (c) 2025 Lukas Splitthoff
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qutip>=5.0
+Requires-Dist: qutip-jax
+Requires-Dist: jax
+Requires-Dist: optax
+Requires-Dist: numpy>=1.24
+Requires-Dist: scipy>=1.10
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: ipywidgets>=8.0
+Requires-Dist: ipympl
+Requires-Dist: sympy
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-nbmake; extra == "dev"
+Requires-Dist: nbmake; extra == "dev"
+Requires-Dist: jupyter; extra == "dev"
+Requires-Dist: jupyterlab; extra == "dev"
+Dynamic: license-file
+
+# bosonic-gates
+
+**Tutorial notebooks and library for bosonic quantum computing with superconducting circuits.**
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YOUR_USERNAME/bosonic-gates/HEAD)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
+Bosonic quantum computing encodes quantum information in the Hilbert space of a harmonic oscillator (a microwave cavity). This repository teaches the physics, simulation tools, and control strategies for two key superconducting circuit platforms — the **transmon-cavity system** and the **SNAIL resonator** — from first principles through to optimal control and error budgets.
+
+The presentation style follows [topocm_content](https://github.com/topocm/topocm_content): each module is a self-contained Jupyter notebook with LaTeX theory cells, executable simulation code, interactive widgets, and a companion PDF.
+
+---
+
+## Modules
+
+| Module | Topic | Notebooks |
+|--------|-------|-----------|
+| **0** | Quantum Harmonic Oscillator Foundations | QHO & ladder operators · Phase space (Wigner, Q-function) · Open systems & Lindblad |
+| **1** | Superconducting Circuit Hamiltonians | LC → Josephson junction · Transmon Hamiltonian · Dispersive coupling |
+| **2** | SNAIL Nonlinear Oscillator | SNAIL potential & Taylor expansion · Circuit parameters · Driven beam-splitter derivation |
+| **3** | Quantum Dynamics | RWA from scratch · Lindblad vs Bloch-Redfield · Floquet-Markov for driven systems |
+| **4** | Bosonic Gates | SNAP gates · ECD gates · Gate benchmarking & process tomography |
+| **5** | Optimal Control | Propagators & fidelity · GRAPE via JAX autodiff · GRAPE vs Krotov vs CRAB |
+| **6** | Error Budget | Error channels · Per-channel infidelity budget · Validity map of master equation methods |
+
+---
+
+## Quick Start
+
+### Browser (no installation)
+
+Click the Binder badge above. All notebooks run in your browser — no local setup required.
+
+> **Note:** Floquet-Markov (module 3) and GRAPE (module 5) notebooks set `N=6, n_steps=64` automatically in Binder mode to stay within memory limits.
+
+### Local Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/bosonic-gates.git
+cd bosonic-gates
+
+# Using conda (recommended)
+conda env create -f environment.yml
+conda activate bosonic-gates
+pip install -e ".[dev]"
+
+# Or using pip only
+pip install -e ".[dev]"
+
+# Launch Jupyter
+jupyter lab
+```
+
+### For Developers
+
+```bash
+# Run the test suite
+pytest tests/
+
+# Smoke-test all notebooks
+pytest --nbmake content/ --nbmake-timeout=600
+
+# Build all companion PDFs
+bash scripts/build_all_pdfs.sh
+```
+
+---
+
+## Prerequisites
+
+This material is aimed at **graduate students and researchers** in quantum engineering who are familiar with:
+- Quantum mechanics at the graduate level (Dirac notation, density matrices, open systems)
+- Basic circuit QED concepts (oscillators, qubits, dispersive coupling)
+
+No prior knowledge of QuTiP or superconducting circuit simulation is assumed.
+
+---
+
+## Dependencies
+
+| Library | Purpose |
+|---------|---------|
+| [`qutip`](https://qutip.org/) ≥ 5.0 | Quantum dynamics (`mesolve`, `brmesolve`, Floquet) |
+| [`qutip-jax`](https://github.com/qutip/qutip-jax) | JAX backend for autodiff GRAPE |
+| [`jax`](https://github.com/google/jax) + [`optax`](https://optax.readthedocs.io/) | Autodiff & gradient optimization |
+| `numpy`, `scipy` | Numerics |
+| `matplotlib`, `ipympl` | Visualization and interactive plots |
+| `ipywidgets` | Interactive parameter sliders |
+| `sympy` | Symbolic RWA derivation (module 3) |
+
+---
+
+## Repository Structure
+
+```
+bosonic-gates/
+├── src/bosonic_gates/     # Installable Python library
+├── content/               # Tutorial notebooks (module0 … module6)
+├── tests/                 # pytest unit tests for the library
+├── scripts/               # PDF build and CI helpers
+├── .binder/               # Binder environment (pinned)
+└── .github/workflows/     # CI: tests + PDF build
+```
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [CLAUDE.md](CLAUDE.md).
+
+CLAUDE.md is written so that Claude Code (or any AI coding assistant) can understand the project structure and contribute new modules or notebooks following the existing conventions.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+## Citation
+
+
+**Key references for the underlying physics:**
+
+- Koch et al., "Charge-insensitive qubit design derived from the Cooper pair box," PRA 76, 042319 (2007) — transmon
+- Chapman et al., "High-On-Off-Ratio Beam-Splitter Interaction for Terminating Reflections in a Superconducting Artificial Atoms Chain," PRX Quantum 4, 020355 (2023) — SNAIL
+- Heeres et al., "Implementing a Universal Gate Set on a Logical Qubit Encoded in an Oscillator," PRL 115, 137002 (2015) — SNAP gates
+- Campagne-Ibarcq et al., "Quantum error correction of a qubit encoded in grid states of an oscillator," Nature 584, 368 (2020) — ECD gates
+- Khaneja et al., "Optimal control of coupled spin dynamics," J. Magn. Reson. 172, 296 (2005) — GRAPE
