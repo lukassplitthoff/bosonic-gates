@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools-scm"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "bosonic-gates"
+version = "0.1.0"
+description = "Tutorial notebooks and library for bosonic quantum computing with superconducting circuits"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "qutip>=5.0",
+    "qutip-jax",
+    "jax",
+    "optax",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "ipywidgets>=8.0",
+    "ipympl",
+    "sympy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-nbmake",
+    "nbmake",
+    "jupyter",
+    "jupyterlab",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

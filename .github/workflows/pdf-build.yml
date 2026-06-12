@@ -1,0 +1,54 @@
+name: Build PDFs
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install qutip numpy scipy matplotlib ipywidgets ipykernel nbconvert
+          pip install -e ".[dev]"
+          python -m ipykernel install --user --name bosonic-gates
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended \
+            texlive-plain-generic pandoc
+
+      - name: Build PDFs from notebooks
+        run: bash scripts/build_all_pdfs.sh
+        env:
+          BINDER_FAST: "1"
+
+      - name: Upload PDFs as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tutorial-pdfs
+          path: "content/**/pdfs/*.pdf"
+          retention-days: 30
+
+      # Push PDFs to a dedicated branch for easy browsing
+      - name: Push PDFs to pdfs branch
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: pdfs
+          publish_dir: content/
+          keep_files: false
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "Auto-build PDFs from notebooks"
