@@ -122,16 +122,6 @@ MIT — see [LICENSE](LICENSE).
 
 ## Citation
 
-If you use this material in teaching or research, please cite:
-
-```bibtex
-@misc{bosonic-gates,
-  author = {Splitthoff, Lukas},
-  title  = {bosonic-gates: Tutorial notebooks for bosonic quantum computing},
-  year   = {2025},
-  url    = {https://github.com/YOUR_USERNAME/bosonic-gates}
-}
-```
 
 **Key references for the underlying physics:**
 
