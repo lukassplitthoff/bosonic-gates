@@ -89,6 +89,15 @@ def compute_error_budget(
 
     Per-channel infidelity = infidelity(all) - infidelity(channel_off).
 
+    Fidelity proxy
+    --------------
+    The "fidelity" used here is P(|1⟩) at the final time step — i.e. the
+    survival probability of the initial state |1⟩, NOT the Nielsen average
+    gate fidelity F = (Tr(P†P) + |Tr(P)|²) / (d²+d).  This is appropriate
+    for comparing decoherence channels on a single trajectory, but should
+    not be confused with gate fidelity.  For the full Nielsen formula, use
+    ``bosonic_gates.driven_kerr.average_gate_fidelity``.
+
     Parameters
     ----------
     cfg : DrivenKerrConfig

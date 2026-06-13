@@ -3,8 +3,10 @@ ECD gates — Echoed Conditional Displacement gates.
 
 An ECD gate is defined on the joint qubit ⊗ cavity Hilbert space as:
 
-    ECD(β) = D(β/2) |e⟩⟨e| + D(-β/2) |g⟩⟨g|
-           = exp(β/2 a† - β*/2 a) ⊗ |e⟩⟨e| + exp(-β/2 a† + β*/2 a) ⊗ |g⟩⟨g|
+    ECD(β) = |e⟩⟨e| ⊗ D(+β/2) + |g⟩⟨g| ⊗ D(−β/2)
+
+Tensor ordering: qubit ⊗ cavity throughout (qubit is the left factor).
+In matrix form this is qt.tensor(|e⟩⟨e|, D(+β/2)) + qt.tensor(|g⟩⟨g|, D(−β/2)).
 
 The "echo" in the name refers to the fact that the ECD is implemented as
 a sequence of two conditional displacements separated by a qubit π pulse:

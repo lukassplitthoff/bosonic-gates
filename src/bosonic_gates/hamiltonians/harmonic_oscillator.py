@@ -30,10 +30,15 @@ def resonator_hamiltonian(w: float, M: int) -> qtp.Qobj:
 
         H_res = w * (adag*a + 1/2)
 
+    The zero-point energy term (w/2) is included, so eigenvalues are
+    w/2, 3w/2, 5w/2, ... rather than 0, w, 2w, ...  This does not affect
+    dynamics or transition frequencies, but will shift absolute energies.
+    To drop the constant, subtract ``w/2 * qt.qeye(M)`` from the result.
+
     Parameters
     ----------
     w : float
-        Angular frequency in GHz.
+        Angular frequency in GHz (ħ = 1 convention; same as Ej/Ec in transmon).
     M : int
         Hilbert space truncation dimension.
 

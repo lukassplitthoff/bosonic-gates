@@ -280,6 +280,7 @@ def optimize_crab(
     H_ctrl: list[qt.Qobj],
     T: float,
     n_basis: int = 5,
+    n_steps: int = 200,
     c_ops: list | None = None,
     n_iter: int = 500,
     seed: int = 42,
@@ -306,6 +307,9 @@ def optimize_crab(
         Total gate time.
     n_basis : int
         Number of random Fourier basis functions per control channel.
+    n_steps : int
+        Number of time slices for the propagator (controls accuracy vs speed).
+        Default 200.
     c_ops : list, optional
         Collapse operators.
     n_iter : int
@@ -323,7 +327,6 @@ def optimize_crab(
     >>> print(f"CRAB fidelity: {result.fidelity:.4f}")
     """
     n_ctrl = len(H_ctrl)
-    n_steps = 200  # time resolution for propagator evaluation
     rng = np.random.default_rng(seed)
 
     U_target = target_U.full()
@@ -387,16 +390,23 @@ def optimize_krotov(
     seed: int = 42,
 ) -> GRAPEResult:
     """
-    Optimize a quantum gate using Krotov's method.
+    Optimize a quantum gate using a Krotov-style iterative update.
 
-    Krotov's method is an iterative monotonically-convergent algorithm.
-    Unlike GRAPE, it guarantees non-decreasing fidelity at each iteration,
-    at the cost of sequential (not parallel) updates.
+    This uses the *gate co-state* variant of Krotov's method adapted for
+    unitary gate synthesis.  The co-state matrix at the final time is:
 
-    The update rule for control j at time slice k is:
-        u_j^{new}(t_k) = u_j^{old}(t_k) + (1/λ_a) Im[⟨χ_j(t_k)|∂H/∂u_j|ψ(t_k)⟩]
+        χ(T) = U_target · U_forward(T)†
 
-    where |χ(t)⟩ is the co-state propagated backward from the target.
+    and the pulse update at each time slice k is:
+
+        u_j^{new}(t_k) += (1/λ_a) Im[ Tr(χ(t_k)† · H_ctrl_j · ψ_k) ]
+
+    where ψ_k is the propagated gate matrix at time t_k.
+
+    This differs from the textbook state-to-state Krotov (Sklarz & Tannor 2002)
+    in that co-states are gate matrices rather than state vectors.  It is
+    monotonically convergent in the gate-fidelity landscape for small λ_a,
+    but convergence is not rigorously guaranteed for large step sizes.
 
     Parameters
     ----------

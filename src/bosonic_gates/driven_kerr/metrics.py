@@ -147,6 +147,12 @@ def error_budget(
     Runs the simulation four times: once with all channels, and once with each
     channel disabled in turn. The difference gives the per-channel contribution.
 
+    Fidelity proxy
+    --------------
+    Uses P(|1⟩) at the final time step as the fidelity proxy, NOT the Nielsen
+    average gate fidelity.  For the richer ``ErrorBudget`` dataclass and the
+    same methodology, prefer ``bosonic_gates.error_budget.compute_error_budget``.
+
     Parameters
     ----------
     cfg    : base configuration (all channels active)

@@ -5,6 +5,17 @@ All frequencies and rates are in angular-frequency units (ℏ = 1, rad/s).
 Every parameter has an explicit note on the 2π convention so that mixing
 ordinary frequency (GHz) and angular frequency (rad/s) is caught immediately.
 
+Unit-convention note
+--------------------
+This module uses rad/s (angular frequencies), while ``hamiltonians`` and
+``snail`` use plain GHz with ħ=1.  To connect them, multiply by 2π:
+
+    from bosonic_gates.hamiltonians import resonator_hamiltonian
+    from bosonic_gates.driven_kerr import DrivenKerrConfig
+
+    w_GHz = 5.0                    # used in resonator_hamiltonian(w=5.0, ...)
+    omega_rad_s = 2*np.pi * w_GHz  # used in DrivenKerrConfig(omega0=omega_rad_s)
+
 Example
 -------
 >>> from bosonic_gates.driven_kerr import DrivenKerrConfig
@@ -82,11 +93,29 @@ class DrivenKerrConfig:
     def replace(self, **kwargs) -> "DrivenKerrConfig":
         """Return a copy with selected fields overridden.
 
+        When ``omega_d`` is changed but ``omega_f`` is not provided, this method
+        checks whether ``omega_f`` was using the default sideband formula
+        ``omega_f = omega12 + omega_d``.  If so, it resets ``omega_f`` to
+        ``None`` so ``__post_init__`` recomputes it from the new ``omega_d``.
+        If ``omega_f`` was explicitly set to a different value, it is preserved.
+
         Example
         -------
         >>> cfg2 = cfg.replace(epsilon=2*np.pi*0.1e9, N=12)
+        >>> # Change drive frequency — omega_f is recomputed automatically if
+        >>> # it was using the default formula:
+        >>> cfg3 = cfg.replace(omega_d=2*np.pi*4.8e9)
         """
         import dataclasses
         d = dataclasses.asdict(self)
+        # If omega_d is being changed and omega_f is not explicitly provided,
+        # check whether omega_f was auto-computed (matches the current default
+        # formula omega12 + omega_d).  If so, reset to None so __post_init__
+        # recomputes it from the new omega_d.  If omega_f was explicitly set
+        # to a different value, leave it unchanged.
+        if "omega_d" in kwargs and "omega_f" not in kwargs:
+            auto_omega_f = self.omega12 + self.omega_d
+            if abs(self.omega_f - auto_omega_f) < 1e-6 * abs(auto_omega_f):
+                d["omega_f"] = None
         d.update(kwargs)
         return DrivenKerrConfig(**d)
