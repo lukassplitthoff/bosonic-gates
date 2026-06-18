@@ -387,6 +387,7 @@ def optimize_krotov(
     c_ops: list | None = None,
     n_iter: int = 100,
     lambda_a: float = 1.0,
+    tol: float = 1e-6,
     seed: int = 42,
 ) -> GRAPEResult:
     """
@@ -496,12 +497,17 @@ def optimize_krotov(
     final_fidelity = _unitary_fidelity(U_final, U_target)
     fidelity_history.append(final_fidelity)
 
+    converged = (
+        len(fidelity_history) >= 2
+        and abs(fidelity_history[-1] - fidelity_history[-2]) < tol
+    )
+
     return GRAPEResult(
         fidelity=final_fidelity,
         infidelity=1.0 - final_fidelity,
         pulse_params=pulses,
         fidelity_history=fidelity_history,
         method="krotov",
-        converged=True,
-        message=f"Krotov converged in {n_iter} iterations",
+        converged=converged,
+        message=f"Krotov: {'converged' if converged else 'did not converge'} after {n_iter} iterations",
     )

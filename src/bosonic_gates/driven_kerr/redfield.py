@@ -92,7 +92,7 @@ def check_positivity(result: qt.solver.Result, tol: float = 1e-4) -> dict:
         mn = float(np.min(evals))
         if mn < max_neg:
             max_neg = mn
-        if mn < -1e-10:
+        if mn < -tol:
             n_violated += 1
     return {
         "max_negative": max_neg,

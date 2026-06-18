@@ -767,6 +767,57 @@ class TestErrorBudget:
 
 
 # ---------------------------------------------------------------------------
+# Floquet-Markov thermal limit (regression for detailed-balance bug)
+# ---------------------------------------------------------------------------
+
+class TestFloquetThermalLimit:
+    """At ε=0 the FM steady state must reproduce the Lindblad/Boltzmann distribution.
+
+    This is the critical regression test: with only `a` as the coupling operator
+    the absorption channel is zero (a|0⟩=0) and the steady state collapses to
+    a flat distribution.  With x = a+a† both emission and absorption are populated
+    and detailed balance is satisfied.
+    """
+
+    def test_steady_state_not_flat(self, default_cfg):
+        """p_ss must NOT be uniform — p0 > p1 at low temperature."""
+        cfg = default_cfg.replace(epsilon=0.0, omega_d=default_cfg.omega0 * 1.001,
+                                  omega_f=default_cfg.omega0, Gamma=TWO_PI * 0.1)
+        modes_t, qe, tgrid = compute_floquet_modes(cfg)
+        # Identify which mode is ≈ |0⟩ and ≈ |1⟩ by Fock weight at t=0
+        m0 = int(np.argmax([abs(modes_t[m, 0, 0])**2 for m in range(cfg.N)]))
+        m1 = int(np.argmax([abs(modes_t[m, 0, 1])**2 for m in range(cfg.N)]))
+        if m0 == m1:
+            pytest.skip("mode ordering ambiguous at this cfg — skip rather than false-fail")
+        R = assemble_rates_with_dephasing(modes_t, qe, cfg, tgrid)
+        p_ss = floquet_steady_state(R)
+        # At nbar=0.02, thermal ratio p1/p0 ≈ 0.02 — far from uniform (0.5 for N=2)
+        ratio = p_ss[m1] / p_ss[m0]
+        assert ratio < 0.5, (
+            f"Steady state looks flat: p_ss[m1]/p_ss[m0] = {ratio:.3f}. "
+            "Detailed balance is broken (absorption channel likely missing)."
+        )
+
+    def test_detailed_balance_ratio(self, default_cfg):
+        """p1/p0 in FM steady state must match nbar/(1+nbar) within 20%."""
+        cfg = default_cfg.replace(epsilon=0.0, omega_d=default_cfg.omega0 * 1.001,
+                                  omega_f=default_cfg.omega0, Gamma=TWO_PI * 0.1)
+        modes_t, qe, tgrid = compute_floquet_modes(cfg)
+        m0 = int(np.argmax([abs(modes_t[m, 0, 0])**2 for m in range(cfg.N)]))
+        m1 = int(np.argmax([abs(modes_t[m, 0, 1])**2 for m in range(cfg.N)]))
+        if m0 == m1:
+            pytest.skip("mode ordering ambiguous")
+        R = assemble_rates_with_dephasing(modes_t, qe, cfg, tgrid)
+        p_ss = floquet_steady_state(R)
+        expected_ratio = cfg.nbar / (1.0 + cfg.nbar)
+        actual_ratio = p_ss[m1] / p_ss[m0]
+        assert abs(actual_ratio - expected_ratio) / expected_ratio < 0.20, (
+            f"FM detailed balance: p1/p0 = {actual_ratio:.4f}, "
+            f"expected {expected_ratio:.4f} (nbar/(1+nbar))"
+        )
+
+
+# ---------------------------------------------------------------------------
 # run_full_floquet_markov (pipeline integration test)
 # ---------------------------------------------------------------------------
 

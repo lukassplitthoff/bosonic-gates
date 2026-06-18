@@ -156,14 +156,19 @@ def assemble_rates_with_dephasing(
 ) -> np.ndarray:
     """Convenience wrapper: assembles rates for loss and dephasing channels.
 
-    Loss channel: coupling operator a (annihilation).
+    Loss/gain channel: coupling operator x = a + a† (Hermitian position-like),
+    so both downward (emission) and upward (absorption) transitions are populated.
     Dephasing channel: coupling operator n = a†a, spectral density = γ_φ (flat).
     """
     a, adag, num_op = make_operators(cfg.N)
-    a_mat = a.full()
+    # Coupling operator must be Hermitian (x = a + a†) so that both the
+    # emission matrix element ⟨n-1|x|n⟩ = √n and the absorption element
+    # ⟨n+1|x|n⟩ = √(n+1) are nonzero.  Using only `a` zeros out all
+    # upward transitions (a|0⟩ = 0), breaking detailed balance.
+    x_mat = (a + adag).full()
     n_mat = num_op.full()
 
-    S_k_loss = compute_fourier_components(modes_t, a_mat, cfg, tgrid)
+    S_k_loss = compute_fourier_components(modes_t, x_mat, cfg, tgrid)
     S_k_deph = compute_fourier_components(modes_t, n_mat, cfg, tgrid)
 
     N = len(quasi_energies)

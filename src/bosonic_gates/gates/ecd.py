@@ -147,12 +147,17 @@ def ecd_qubit_reset_sequence(N: int, beta: complex) -> list[qt.Qobj]:
     Decompose ECD(β) into physical operations for simulation.
 
     The ECD gate is physically implemented as:
-        1. Conditional displacement D_cond(+β/2) (drive at ω_r + χ/2)
+        1. Conditional displacement D_cond(+β/2) on |e⟩ (identity on |g⟩)
         2. Qubit π pulse (X gate)
-        3. Conditional displacement D_cond(-β/2) (drive at ω_r + χ/2 again)
-        4. Qubit π pulse (X gate) — to reset qubit rotation
+        3. Conditional displacement D_cond(-β/2) on |e⟩ (identity on |g⟩)
+        4. Qubit π pulse (X gate) — cancels step 2, restoring the qubit
 
-    This decomposition preserves the qubit state after the gate.
+    Note: the two X pulses cancel, so the qubit is *not* left flipped after
+    this sequence.  This is NOT the physical Eickbusch echo (Eickbusch et al.,
+    Nature Physics 18, 1464 (2022)), which uses a symmetric ±β/2 displacement
+    conditioned on both qubit states and leaves the qubit flipped.  This
+    decomposition is correct as an operator identity for ECD(β) but should not
+    be taken as the lab pulse sequence for the echo protocol.
 
     Returns a list of [U_1, U_2, U_3, U_4] to be applied in order.
 
