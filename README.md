@@ -58,10 +58,10 @@ jupyter lab
 pytest tests/
 
 # Smoke-test all notebooks
-pytest --nbmake content/ --nbmake-timeout=600
+pytest --nbmake notebooks/ --nbmake-timeout=600
 
 # Build all companion PDFs
-bash scripts/build_all_pdfs.sh
+bash build/build_all_pdfs.sh
 ```
 
 ---
@@ -95,9 +95,9 @@ No prior knowledge of QuTiP or superconducting circuit simulation is assumed.
 ```
 bosonic-gates/
 ├── src/bosonic_gates/     # Installable Python library
-├── content/               # Tutorial notebooks (module0 … module6)
+├── notebooks/             # Tutorial notebooks (module0 … module6)
 ├── tests/                 # pytest unit tests for the library
-├── scripts/               # PDF build and CI helpers
+├── build/                 # PDF build and CI helpers
 ├── .binder/               # Binder environment (pinned)
 └── .github/workflows/     # CI: tests + PDF build
 ```

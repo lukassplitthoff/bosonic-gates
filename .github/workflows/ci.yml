@@ -19,9 +19,9 @@ jobs:
           BANNED="qubitdyne bosonsampling ATS_analytics"
           FAILED=0
           for sym in $BANNED; do
-            if grep -r "$sym" src/ content/ --include="*.py" --include="*.ipynb" -l 2>/dev/null | grep -q .; then
+            if grep -r "$sym" src/ notebooks/ --include="*.py" --include="*.ipynb" -l 2>/dev/null | grep -q .; then
               echo "ERROR: banned symbol '$sym' found in public files:"
-              grep -r "$sym" src/ content/ --include="*.py" --include="*.ipynb" -l
+              grep -r "$sym" src/ notebooks/ --include="*.py" --include="*.ipynb" -l
               FAILED=1
             fi
           done
@@ -73,7 +73,7 @@ jobs:
 
       - name: Run notebook smoke tests (module0 only on PRs)
         run: |
-          pytest --nbmake content/module0_foundations/ \
+          pytest --nbmake notebooks/module0_foundations/ \
             --nbmake-timeout=300 \
             --ignore-glob="**/module5*" \
             --ignore-glob="**/module6*"

@@ -6,8 +6,8 @@ import json, sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 for nb_path, name in [
-    ("content/module0_foundations/nb0b_phase_space.ipynb", "nb0b"),
-    ("content/module0_foundations/nb0c_open_systems.ipynb", "nb0c"),
+    ("notebooks/module0_foundations/nb0b_phase_space.ipynb", "nb0b"),
+    ("notebooks/module0_foundations/nb0c_open_systems.ipynb", "nb0c"),
 ]:
     print(f"\n{'='*60}")
     print(f"Smoke testing {name}: params + imports + helpers")

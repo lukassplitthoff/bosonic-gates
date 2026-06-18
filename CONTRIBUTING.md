@@ -17,7 +17,7 @@ pip install -e ".[dev]"
 | Location | Rule |
 |----------|------|
 | `src/bosonic_gates/` | Physics functions used by ≥2 notebooks |
-| `content/moduleN_*/` | Tutorial notebooks and companion content |
+| `notebooks/moduleN_*/` | Tutorial notebooks and companion content |
 | `tests/` | Unit tests for the library (not notebooks) |
 
 Single-notebook helpers should stay inside the notebook. Move to the library once a second notebook needs the same function.
@@ -46,7 +46,7 @@ Single-notebook helpers should stay inside the notebook. Move to the library onc
 pytest tests/ -v
 
 # Notebook smoke tests (slow)
-pytest --nbmake content/ --nbmake-timeout=600
+pytest --nbmake notebooks/ --nbmake-timeout=600
 ```
 
 All tests must pass before opening a pull request.

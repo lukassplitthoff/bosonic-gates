@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Build companion PDFs for all tutorial notebooks.
-# Usage: bash scripts/build_all_pdfs.sh
+# Usage: bash build/build_all_pdfs.sh
 # Set BINDER_FAST=1 to use reduced parameters for fast execution.
 
 set -e
 
-CONTENT_DIR="content"
-TEMPLATE=""  # add --template scripts/nbconvert_template.tplx when template is ready
+CONTENT_DIR="notebooks"
+TEMPLATE=""  # add --template build/nbconvert_template.tplx when template is ready
 
 echo "=== Building PDFs from tutorial notebooks ==="
 

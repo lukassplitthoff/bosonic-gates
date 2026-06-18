@@ -2,8 +2,8 @@
 import json, ast, sys
 
 for nb_path in [
-    "content/module0_foundations/nb0b_phase_space.ipynb",
-    "content/module0_foundations/nb0c_open_systems.ipynb",
+    "notebooks/module0_foundations/nb0b_phase_space.ipynb",
+    "notebooks/module0_foundations/nb0c_open_systems.ipynb",
 ]:
     with open(nb_path, encoding="utf-8") as f:
         nb = json.load(f)

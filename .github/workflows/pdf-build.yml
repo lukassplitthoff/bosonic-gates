@@ -29,7 +29,7 @@ jobs:
             texlive-plain-generic pandoc
 
       - name: Build PDFs from notebooks
-        run: bash scripts/build_all_pdfs.sh
+        run: bash build/build_all_pdfs.sh
         env:
           BINDER_FAST: "1"
 
@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tutorial-pdfs
-          path: "content/**/pdfs/*.pdf"
+          path: "notebooks/**/pdfs/*.pdf"
           retention-days: 30
 
       # Push PDFs to a dedicated branch for easy browsing
@@ -47,7 +47,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: pdfs
-          publish_dir: content/
+          publish_dir: notebooks/
           keep_files: false
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
