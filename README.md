@@ -9,8 +9,6 @@
 
 Bosonic quantum computing encodes quantum information in the Hilbert space of a harmonic oscillator (a microwave cavity). This repository teaches the physics, simulation tools, and control strategies for two key superconducting circuit platforms — the **transmon-cavity system** and the **SNAIL resonator** — from first principles through to optimal control and error budgets.
 
-The presentation style follows [topocm_content](https://github.com/topocm/topocm_content): each module is a self-contained Jupyter notebook with LaTeX theory cells, executable simulation code, interactive widgets, and a companion PDF.
-
 ---
 
 ## Modules
