@@ -14,6 +14,6 @@ dependencies:
   - pip
   - pip:
       - qutip==5.0.4
-      - qutip-jax==0.1.1
+      - qutip-jax==0.1.0
       - jax[cpu]==0.4.26
       - optax==0.2.2
