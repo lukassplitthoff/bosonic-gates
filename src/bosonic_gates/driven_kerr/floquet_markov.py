@@ -230,9 +230,15 @@ def run_floquet_markov(
 
 
 def floquet_steady_state(R: np.ndarray) -> np.ndarray:
-    """Compute the steady-state population vector (null vector of R)."""
+    """Compute the steady-state population vector (null vector of R).
+
+    Solves R @ p = 0 with Σ p = 1 by replacing the last row of R with
+    the normalization constraint.  Must use R directly (not R.T): R.T @ p = 0
+    always admits p = [1/N,...,1/N] as a solution because column sums of R
+    are zero by construction, which would give the wrong (uniform) answer.
+    """
     N = R.shape[0]
-    A = R.T.copy()
+    A = R.copy()   # right null vector of R, not left null vector of R.T
     A[-1, :] = 1.0
     b = np.zeros(N)
     b[-1] = 1.0

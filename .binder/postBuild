@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-pip install "qutip==5.0.4" "qutip-jax" "jax[cpu]>=0.4.25" "optax>=0.2"
+pip install "qutip==5.2.3" "qutip-jax==0.1.1" "jax[cpu]>=0.4" "optax>=0.2"
 pip install -e .
