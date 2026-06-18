@@ -2,7 +2,7 @@
 
 **Tutorial notebooks and library for bosonic quantum computing with superconducting circuits.**
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YOUR_USERNAME/bosonic-gates/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lukassplitthoff/bosonic-gates/HEAD)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -31,12 +31,12 @@ Bosonic quantum computing encodes quantum information in the Hilbert space of a 
 
 Click the Binder badge above. All notebooks run in your browser — no local setup required.
 
-> **Note:** Floquet-Markov (module 3) and GRAPE (module 5) notebooks set `N=6, n_steps=64` automatically in Binder mode to stay within memory limits.
+> **Note:** Floquet-Markov (module 3) and GRAPE (module 5) notebooks set `N=6, n_steps=64` automatically in Binder mode to stay within memory limits. Results and figures will therefore differ from those in the companion PDFs, which are built with full parameters — this is expected, not an error in your run.
 
 ### Local Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/bosonic-gates.git
+git clone https://github.com/lukassplitthoff/bosonic-gates.git
 cd bosonic-gates
 
 # Using conda (recommended)
@@ -124,7 +124,8 @@ MIT — see [LICENSE](LICENSE).
 **Key references for the underlying physics:**
 
 - Koch et al., "Charge-insensitive qubit design derived from the Cooper pair box," PRA 76, 042319 (2007) — transmon
-- Chapman et al., "High-On-Off-Ratio Beam-Splitter Interaction for Terminating Reflections in a Superconducting Artificial Atoms Chain," PRX Quantum 4, 020355 (2023) — SNAIL
+- Frattini et al., "3-wave mixing Josephson dipole element," APL 110, 222603 (2017) — SNAIL element
+- Chapman et al., "High-On-Off-Ratio Beam-Splitter Interaction for Terminating Reflections in a Superconducting Artificial Atoms Chain," PRX Quantum 4, 020355 (2023) — SNAIL beam-splitter
 - Heeres et al., "Implementing a Universal Gate Set on a Logical Qubit Encoded in an Oscillator," PRL 115, 137002 (2015) — SNAP gates
 - Campagne-Ibarcq et al., "Quantum error correction of a qubit encoded in grid states of an oscillator," Nature 584, 368 (2020) — ECD gates
 - Khaneja et al., "Optimal control of coupled spin dynamics," J. Magn. Reson. 172, 296 (2005) — GRAPE
