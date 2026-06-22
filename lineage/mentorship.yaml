@@ -1,0 +1,466 @@
+# Academic lineage data for bosonic quantum computing
+# All edges: verified: false means auto-resolved or known but not cross-checked
+# ORCIDs welcome — fill them in to enable precise OpenAlex resolution
+
+persons:
+  # ── Yale founding PIs ─────────────────────────────────────────────────────
+  - slug: devoret
+    name: Michel Devoret
+    orcid: "https://orcid.org/0000-0002-2883-9575"
+    affiliation: Yale University
+    role: founding_pi
+    google_scholar: "https://scholar.google.com/citations?user=2CeGqLAAAAAJ&hl=en"
+
+  - slug: schoelkopf
+    name: Robert Schoelkopf
+    orcid: "https://orcid.org/0000-0002-2469-5068"
+    affiliation: Yale University
+    role: founding_pi
+    google_scholar: "https://scholar.google.com/citations?user=T9a08xsAAAAJ&hl=en"
+
+  - slug: girvin
+    name: Steven Girvin
+    orcid: "https://orcid.org/0000-0002-6470-5494"
+    affiliation: Yale University
+    role: founding_pi
+    google_scholar: "https://scholar.google.com/citations?user=ZQHLxBcAAAAJ&hl=en"
+
+  - slug: mirrahimi
+    name: Mazyar Mirrahimi
+    orcid: "https://orcid.org/0000-0001-9471-6031"
+    affiliation: INRIA / Yale University
+    role: founding_pi
+    google_scholar: "https://scholar.google.com/citations?user=dfy57Z4AAAAJ&hl=en"
+
+  # ── Yale-affiliated theorist PI ──────────────────────────────────────────
+  - slug: liang_jiang
+    name: Liang Jiang
+    orcid: "https://orcid.org/0000-0002-8046-3931"
+    affiliation: University of Chicago (former Yale faculty)
+    role: founding_pi
+    google_scholar: "https://scholar.google.com/citations?user=-4vWibwAAAAJ&hl=en"
+
+  # ── Sherbrooke founding PIs ───────────────────────────────────────────────
+  - slug: blais
+    name: Alexandre Blais
+    orcid: "https://orcid.org/0000-0002-0591-2012"
+    affiliation: Institut quantique, Université de Sherbrooke
+    role: founding_pi
+    google_scholar: "https://scholar.google.com/citations?user=0n2D4lkAAAAJ&hl=en"
+
+  - slug: pioro_ladriere
+    name: Michel Pioro-Ladrière
+    orcid: "https://orcid.org/0000-0001-9762-5557"
+    affiliation: Institut quantique, Université de Sherbrooke
+    role: founding_pi
+    google_scholar: null
+
+  # ── Second-generation PIs / researchers ──────────────────────────────────
+  - slug: wallraff
+    name: Andreas Wallraff
+    orcid: "https://orcid.org/0000-0002-3476-4485"
+    affiliation: ETH Zurich
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=nXO5vugAAAAJ&hl=en"
+
+  - slug: leghtas
+    name: Zaki Leghtas
+    orcid: "https://orcid.org/0000-0002-9172-1537"
+    affiliation: Mines Paris / Alice & Bob
+    role: pi_company_head
+    google_scholar: "https://scholar.google.com/citations?user=ZKphGPMAAAAJ&hl=en"
+
+  - slug: kirchmair
+    name: Gerhard Kirchmair
+    orcid: "https://orcid.org/0000-0003-4286-8839"
+    affiliation: IQOQI / University of Innsbruck
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=7FdAFX4AAAAJ&hl=en"
+
+  - slug: pfaff
+    name: Wolfgang Pfaff
+    orcid: "https://orcid.org/0000-0003-4303-0819"
+    affiliation: University of Illinois at Urbana-Champaign
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=H5fUUMAAAAAJ&hl=en"
+
+  - slug: gao
+    name: Yvonne Gao
+    orcid: "https://orcid.org/0000-0002-6360-9679"
+    affiliation: National University of Singapore
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=A3AtqowAAAAJ&hl=en"
+
+  - slug: gasparinetti
+    name: Simone Gasparinetti
+    orcid: "https://orcid.org/0000-0002-7238-693X"
+    affiliation: Chalmers University of Technology
+    role: pi
+    flagged: true   # name-matched, not ORCID-verified
+    google_scholar: "https://scholar.google.com/citations?user=e0UMI-UAAAAJ&hl=en"
+
+  - slug: ofek
+    name: Nissim Ofek
+    orcid: null
+    affiliation: Yale University
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=OrvEhDIAAAAJ&hl=en"
+
+  - slug: touzard
+    name: Steven Touzard
+    orcid: "https://orcid.org/0000-0002-3475-2839"
+    affiliation: National University of Singapore
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=fIs6_wMAAAAJ&hl=en"
+
+  - slug: schuster
+    name: David Schuster
+    orcid: "https://orcid.org/0000-0002-0012-3874"
+    affiliation: Stanford University
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=c5NZoTcAAAAJ&hl=en"
+
+  - slug: shankar
+    name: Shyam Shankar
+    orcid: "https://orcid.org/0000-0002-1311-9508"
+    affiliation: University of Texas at Austin
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=aP3aSBcAAAAJ&hl=en"
+
+  - slug: vlastakis
+    name: Brian Vlastakis
+    orcid: null
+    affiliation: Yale University
+    role: pi
+    google_scholar: null
+
+  - slug: minev
+    name: Zlatko Minev
+    orcid: null
+    affiliation: Google Quantum AI (former Yale)
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=dPijfMIAAAAJ&hl=en"
+
+  - slug: reinhold
+    name: Philip Reinhold
+    orcid: "https://orcid.org/0000-0002-8141-1842"
+    affiliation: Yale University
+    role: pi
+    google_scholar: null
+
+  - slug: hatridge
+    name: Michael Hatridge
+    orcid: "https://orcid.org/0000-0002-0848-7867"
+    affiliation: Yale University
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=ZWlyPOAAAAAJ&hl=en"
+
+  - slug: frunzio
+    name: Luigi Frunzio
+    orcid: "https://orcid.org/0000-0002-0272-5481"
+    affiliation: Yale University
+    role: pi
+    google_scholar: "https://scholar.google.com/citations?user=kP6ZgKUAAAAJ&hl=en"
+
+  # ── Company heads / spinout founders ─────────────────────────────────────
+  - slug: frattini
+    name: Nick Frattini
+    orcid: null
+    affiliation: Nord Quantique
+    role: company_head
+    google_scholar: "https://scholar.google.com/citations?user=zt3jSDkAAAAJ&hl=en"
+
+  - slug: lescanne
+    name: Raphaël Lescanne
+    orcid: null
+    affiliation: Alice & Bob
+    role: company_head
+    google_scholar: "https://scholar.google.com/citations?user=4ClPTWYAAAAJ&hl=en"
+
+  - slug: reagor
+    name: Matthew Reagor
+    orcid: "https://orcid.org/0000-0003-2576-9097"
+    affiliation: Rigetti Computing
+    role: company_head
+    google_scholar: "https://scholar.google.com/citations?user=UJEb6xIAAAAJ&hl=en"
+
+  - slug: noh
+    name: Kyungjoo Noh
+    orcid: "https://orcid.org/0000-0002-6318-8472"
+    affiliation: NVIDIA (former AWS CQC)
+    role: company_head
+    google_scholar: "https://scholar.google.com/citations?user=_daI1NMAAAAJ&hl=en"
+
+  - slug: hann
+    name: Connor Hann
+    orcid: "https://orcid.org/0000-0003-0665-7161"
+    affiliation: AWS Center for Quantum Computing
+    role: company_head
+    google_scholar: "https://scholar.google.com/citations?user=dWLgTtsAAAAJ&hl=en"
+
+  - slug: camirand_lemyre
+    name: Julien Camirand Lemyre
+    orcid: "https://orcid.org/0000-0001-5381-8998"
+    affiliation: Nord Quantique
+    role: company_head
+    google_scholar: "https://scholar.google.com/citations?user=srARyiIAAAAJ&hl=en"
+
+  - slug: st_jean
+    name: Philippe St-Jean
+    orcid: "https://orcid.org/0000-0002-2072-0756"
+    affiliation: Nord Quantique / Université de Montréal
+    role: company_head
+    google_scholar: null
+
+companies:
+  - slug: alice_and_bob
+    name: Alice & Bob
+    type: company
+
+  - slug: nord_quantique
+    name: Nord Quantique
+    type: company
+
+  - slug: rigetti
+    name: Rigetti Computing
+    type: company
+
+  - slug: aws_cqc
+    name: AWS Center for Quantum Computing
+    type: company
+
+  - slug: yale_ql
+    name: Yale Quantum Lab
+    type: lab
+
+  - slug: chalmers_qd
+    name: Chalmers Quantum Device Lab
+    type: lab
+
+  - slug: eth_zurich_qd
+    name: ETH Zurich Qudev Lab
+    type: lab
+
+  - slug: iqoqi_innsbruck
+    name: IQOQI Innsbruck
+    type: lab
+
+  - slug: iq_sherbrooke
+    name: Institut quantique Sherbrooke
+    type: lab
+
+mentorship_edges:
+  # ── Yale lineage ──────────────────────────────────────────────────────────
+  - advisor: devoret
+    advisee: frattini
+    type: phd
+    verified: false
+
+  - advisor: devoret
+    advisee: leghtas
+    type: postdoc
+    verified: true
+
+  - advisor: devoret
+    advisee: reagor
+    type: phd
+    verified: false
+
+  - advisor: schoelkopf
+    advisee: gao
+    type: phd
+    verified: false
+
+  - advisor: schoelkopf
+    advisee: wallraff
+    type: postdoc
+    verified: false
+
+  - advisor: schoelkopf
+    advisee: ofek
+    type: phd
+    verified: false
+
+  - advisor: schoelkopf
+    advisee: kirchmair
+    type: postdoc
+    verified: true
+
+  - advisor: schoelkopf
+    advisee: pfaff
+    type: postdoc
+    verified: true
+
+  - advisor: schoelkopf
+    advisee: hann
+    type: phd
+    verified: true
+
+  - advisor: liang_jiang
+    advisee: noh
+    type: phd
+    verified: true
+
+  - advisor: schoelkopf
+    advisee: schuster
+    type: phd
+    verified: true
+
+  - advisor: devoret
+    advisee: shankar
+    type: postdoc
+    verified: true
+
+  - advisor: schoelkopf
+    advisee: vlastakis
+    type: phd
+    verified: false
+
+  - advisor: devoret
+    advisee: minev
+    type: phd
+    verified: true
+
+  - advisor: devoret
+    advisee: reinhold
+    type: phd
+    verified: false
+
+  - advisor: devoret
+    advisee: hatridge
+    type: postdoc
+    verified: false
+
+  - advisor: schoelkopf
+    advisee: frunzio
+    type: postdoc
+    verified: true
+
+  - advisor: girvin
+    advisee: touzard
+    type: phd
+    verified: false
+
+  - advisor: mirrahimi
+    advisee: leghtas
+    type: phd_co
+    verified: false
+
+  - advisor: mirrahimi
+    advisee: lescanne
+    type: phd_co
+    verified: false
+
+  # ── ETH / Chalmers lineage ────────────────────────────────────────────────
+  - advisor: wallraff
+    advisee: gasparinetti
+    type: postdoc
+    verified: false
+
+  # ── Paris / bosonic spinout lineage ──────────────────────────────────────
+  - advisor: leghtas
+    advisee: lescanne
+    type: phd
+    verified: false
+
+  # ── Sherbrooke lineage ────────────────────────────────────────────────────
+  - advisor: pioro_ladriere
+    advisee: camirand_lemyre
+    type: phd
+    verified: false
+
+  # st_jean PhD was at Ecole Polytechnique de Montreal (photonics), not Sherbrooke
+  # — his connection to Nord Quantique is via affiliation, not PhD lineage under pioro_ladriere
+
+affiliation_edges:
+  # ── Founders / company heads ──────────────────────────────────────────────
+  - person: lescanne
+    company: alice_and_bob
+    type: founded
+    verified: false
+
+  - person: leghtas
+    company: alice_and_bob
+    type: co-founded
+    verified: false
+
+  - person: touzard
+    company: alice_and_bob
+    type: co-founded
+    verified: false
+
+  - person: reagor
+    company: rigetti
+    type: leads
+    verified: false
+
+  - person: frattini
+    company: nord_quantique
+    type: leads
+    verified: false
+
+  - person: noh
+    company: aws_cqc
+    type: leads
+    verified: false
+
+  - person: hann
+    company: aws_cqc
+    type: leads
+    verified: false
+
+  - person: camirand_lemyre
+    company: nord_quantique
+    type: founded
+    verified: false
+
+  - person: st_jean
+    company: nord_quantique
+    type: co-founded
+    verified: false
+
+  # ── Lab affiliations ──────────────────────────────────────────────────────
+  - person: devoret
+    company: yale_ql
+    type: faculty
+    verified: false
+
+  - person: schoelkopf
+    company: yale_ql
+    type: faculty
+    verified: false
+
+  - person: girvin
+    company: yale_ql
+    type: faculty
+    verified: false
+
+  - person: ofek
+    company: yale_ql
+    type: faculty
+    verified: false
+
+  - person: gasparinetti
+    company: chalmers_qd
+    type: faculty
+    verified: false
+
+  - person: wallraff
+    company: eth_zurich_qd
+    type: faculty
+    verified: false
+
+  - person: kirchmair
+    company: iqoqi_innsbruck
+    type: faculty
+    verified: false
+
+  - person: blais
+    company: iq_sherbrooke
+    type: faculty
+    verified: false
+
+  - person: pioro_ladriere
+    company: iq_sherbrooke
+    type: faculty
+    verified: false

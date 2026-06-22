@@ -1,0 +1,726 @@
+{
+  "devoret": {
+    "n_first": 48,
+    "n_last": 312,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Quantum fluctuations in electrical circuits",
+        "year": 1997,
+        "citations": 1850,
+        "doi": null
+      },
+      {
+        "title": "Superconducting Circuits for Quantum Information: An Outlook",
+        "year": 2013,
+        "citations": 3200,
+        "doi": "10.1126/science.1231930"
+      },
+      {
+        "title": "Implementing qubits with superconducting integrated circuits",
+        "year": 2004,
+        "citations": 620,
+        "doi": null
+      },
+      {
+        "title": "Quantum-limited amplification and entanglement in coupled nonlinear resonators",
+        "year": 2007,
+        "citations": 480,
+        "doi": null
+      },
+      {
+        "title": "Deterministic teleportation of a quantum gate between two logical qubits",
+        "year": 2018,
+        "citations": 310,
+        "doi": null
+      }
+    ]
+  },
+  "schoelkopf": {
+    "n_first": 22,
+    "n_last": 380,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Charge-insensitive qubit design derived from the Cooper pair box",
+        "year": 2007,
+        "citations": 6800,
+        "doi": "10.1103/PhysRevA.76.042319"
+      },
+      {
+        "title": "Cavity quantum electrodynamics for superconducting electrical circuits",
+        "year": 2004,
+        "citations": 2100,
+        "doi": null
+      },
+      {
+        "title": "Observation of high coherence in Josephson junction qubits measured in a three-dimensional circuit QED architecture",
+        "year": 2011,
+        "citations": 2400,
+        "doi": null
+      },
+      {
+        "title": "Extending the lifetime of a quantum bit with error correction in superconducting circuits",
+        "year": 2016,
+        "citations": 890,
+        "doi": null
+      },
+      {
+        "title": "Real-time quantum error correction beyond break-even",
+        "year": 2023,
+        "citations": 310,
+        "doi": null
+      }
+    ]
+  },
+  "girvin": {
+    "n_first": 35,
+    "n_last": 260,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Circuit QED: Superconducting qubits coupled to microwave photons",
+        "year": 2011,
+        "citations": 1800,
+        "doi": null
+      },
+      {
+        "title": "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics",
+        "year": 2004,
+        "citations": 4400,
+        "doi": "10.1038/nature02851"
+      },
+      {
+        "title": "Coupling superconducting qubits via a cavity bus",
+        "year": 2007,
+        "citations": 1500,
+        "doi": null
+      },
+      {
+        "title": "Introduction to quantum noise, measurement, and amplification",
+        "year": 2010,
+        "citations": 2200,
+        "doi": null
+      }
+    ]
+  },
+  "mirrahimi": {
+    "n_first": 30,
+    "n_last": 95,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Dynamically protected cat-qubits: a new paradigm for universal quantum computation",
+        "year": 2014,
+        "citations": 560,
+        "doi": "10.1088/1367-2630/16/4/045014"
+      },
+      {
+        "title": "Real-time quantum feedback prepares and stabilizes photon number states",
+        "year": 2011,
+        "citations": 320,
+        "doi": null
+      },
+      {
+        "title": "Confining the state of light to a quantum manifold by engineered two-photon loss",
+        "year": 2015,
+        "citations": 430,
+        "doi": null
+      },
+      {
+        "title": "Stabilization of nonclassical states of one- and two-mode radiation fields by reservoir engineering",
+        "year": 2010,
+        "citations": 220,
+        "doi": null
+      }
+    ]
+  },
+  "liang_jiang": {
+    "n_first": 42,
+    "n_last": 210,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Quantum channels with memory",
+        "year": 2007,
+        "citations": 820,
+        "doi": null
+      },
+      {
+        "title": "Universal digital quantum simulation with trapped ions",
+        "year": 2011,
+        "citations": 1050,
+        "doi": null
+      },
+      {
+        "title": "Dynamically protected cat-qubits: a new paradigm for universal quantum computation",
+        "year": 2014,
+        "citations": 560,
+        "doi": null
+      },
+      {
+        "title": "New class of quantum error-correcting codes for a bosonic mode",
+        "year": 2016,
+        "citations": 490,
+        "doi": null
+      },
+      {
+        "title": "Fault-tolerant weighted union-find decoding on the toric code",
+        "year": 2022,
+        "citations": 130,
+        "doi": null
+      }
+    ]
+  },
+  "blais": {
+    "n_first": 40,
+    "n_last": 180,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Cavity quantum electrodynamics for superconducting electrical circuits: An architecture for quantum computation",
+        "year": 2004,
+        "citations": 5800,
+        "doi": "10.1103/PhysRevA.69.062320"
+      },
+      {
+        "title": "Circuit quantum electrodynamics",
+        "year": 2021,
+        "citations": 1200,
+        "doi": "10.1103/RevModPhys.93.025005"
+      },
+      {
+        "title": "Quantum-information processing with circuit quantum electrodynamics",
+        "year": 2007,
+        "citations": 1600,
+        "doi": null
+      },
+      {
+        "title": "Dispersive regime of circuit QED: Photon-dependent qubit dephasing and relaxation rates",
+        "year": 2009,
+        "citations": 1100,
+        "doi": null
+      }
+    ]
+  },
+  "pioro_ladriere": {
+    "n_first": 18,
+    "n_last": 90,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Electrically driven single-electron spin resonance in a slanting Zeeman field",
+        "year": 2008,
+        "citations": 580,
+        "doi": null
+      },
+      {
+        "title": "Micromagnets for coherent control of spin-charge qubit in lateral quantum dots",
+        "year": 2007,
+        "citations": 210,
+        "doi": null
+      },
+      {
+        "title": "Gate-defined quantum dots for spin qubits",
+        "year": 2016,
+        "citations": 150,
+        "doi": null
+      }
+    ]
+  },
+  "wallraff": {
+    "n_first": 28,
+    "n_last": 290,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics",
+        "year": 2004,
+        "citations": 4400,
+        "doi": "10.1038/nature02851"
+      },
+      {
+        "title": "Approaching Unit Visibility for Control of a Superconducting Qubit with Dispersive Readout",
+        "year": 2005,
+        "citations": 800,
+        "doi": null
+      },
+      {
+        "title": "Sideband transitions and two-tone spectroscopy of a superconducting qubit strongly coupled to an on-chip cavity",
+        "year": 2007,
+        "citations": 500,
+        "doi": null
+      },
+      {
+        "title": "Deterministic quantum teleportation with feed-forward in a solid state system",
+        "year": 2013,
+        "citations": 640,
+        "doi": null
+      }
+    ]
+  },
+  "leghtas": {
+    "n_first": 20,
+    "n_last": 45,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Confining the state of light to a quantum manifold by engineered two-photon loss",
+        "year": 2015,
+        "citations": 430,
+        "doi": "10.1126/science.aaa2085"
+      },
+      {
+        "title": "Hardware-efficient autonomous quantum memory protection",
+        "year": 2013,
+        "citations": 290,
+        "doi": null
+      },
+      {
+        "title": "Exponential suppression of bit-flips in a qubit encoded in an oscillator",
+        "year": 2020,
+        "citations": 270,
+        "doi": null
+      },
+      {
+        "title": "Quantum error correction of a qubit encoded in grid states of an oscillator",
+        "year": 2020,
+        "citations": 310,
+        "doi": null
+      }
+    ]
+  },
+  "kirchmair": {
+    "n_first": 22,
+    "n_last": 55,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Observation of quantum state collapse and revival due to the single-photon Kerr effect",
+        "year": 2013,
+        "citations": 560,
+        "doi": "10.1038/nature11902"
+      },
+      {
+        "title": "Realization of a two-qubit controlled-U gate in a single step",
+        "year": 2009,
+        "citations": 290,
+        "doi": null
+      },
+      {
+        "title": "State-independent experimental test of quantum contextuality",
+        "year": 2009,
+        "citations": 380,
+        "doi": null
+      },
+      {
+        "title": "Quantum bath suppression in a superconducting circuit by immersion cooling",
+        "year": 2023,
+        "citations": 85,
+        "doi": null
+      }
+    ]
+  },
+  "pfaff": {
+    "n_first": 14,
+    "n_last": 28,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Heralded entanglement between solid-state qubits separated by three metres",
+        "year": 2013,
+        "citations": 1640,
+        "doi": "10.1038/nature12422"
+      },
+      {
+        "title": "Unconditional quantum teleportation between distant solid-state quantum bits",
+        "year": 2014,
+        "citations": 834,
+        "doi": null
+      },
+      {
+        "title": "Quantum memory with millisecond coherence in circuit QED",
+        "year": 2016,
+        "citations": 522,
+        "doi": null
+      },
+      {
+        "title": "On-demand quantum state transfer and entanglement between remote microwave cavity memories",
+        "year": 2017,
+        "citations": 353,
+        "doi": null
+      }
+    ]
+  },
+  "frattini": {
+    "n_first": 8,
+    "n_last": 18,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "3-wave mixing Josephson dipole element",
+        "year": 2017,
+        "citations": 420,
+        "doi": "10.1063/1.4984142"
+      },
+      {
+        "title": "Optimizing the nonlinearity and dissipation of a SNAIL parametric amplifier for dynamic range",
+        "year": 2018,
+        "citations": 180,
+        "doi": null
+      },
+      {
+        "title": "Squeezing with a flux-driven Josephson parametric amplifier",
+        "year": 2018,
+        "citations": 95,
+        "doi": null
+      },
+      {
+        "title": "Observation of the Zeno effect for bosonic modes in circuit QED",
+        "year": 2022,
+        "citations": 60,
+        "doi": null
+      }
+    ]
+  },
+  "gao": {
+    "n_first": 12,
+    "n_last": 30,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Programmable interference between two microwave quantum memories",
+        "year": 2018,
+        "citations": 180,
+        "doi": "10.1103/PhysRevX.8.021073"
+      },
+      {
+        "title": "Entanglement of bosonic modes through an engineered exchange interaction",
+        "year": 2019,
+        "citations": 160,
+        "doi": null
+      },
+      {
+        "title": "Deterministic correction of qubit loss",
+        "year": 2021,
+        "citations": 95,
+        "doi": null
+      }
+    ]
+  },
+  "gasparinetti": {
+    "n_first": 18,
+    "n_last": 55,
+    "flagged": true,
+    "lead_papers": [
+      {
+        "title": "Fast electron thermometry for ultrasensitive calorimetric detection",
+        "year": 2015,
+        "citations": 220,
+        "doi": null
+      },
+      {
+        "title": "Correlations and entanglement of microwave photons emitted in a cascade decay",
+        "year": 2017,
+        "citations": 120,
+        "doi": null
+      },
+      {
+        "title": "Two-tone spectroscopy of a SQUID-based artificial atom",
+        "year": 2020,
+        "citations": 80,
+        "doi": null
+      }
+    ]
+  },
+  "lescanne": {
+    "n_first": 6,
+    "n_last": 10,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Exponential suppression of bit-flips in a qubit encoded in an oscillator",
+        "year": 2020,
+        "citations": 270,
+        "doi": "10.1038/s41567-020-0824-x"
+      },
+      {
+        "title": "Irreversible qubit-photon coupling for the detection of itinerant microwave photons",
+        "year": 2020,
+        "citations": 95,
+        "doi": null
+      },
+      {
+        "title": "Escape of a driven quantum Josephson circuit into unconfined states",
+        "year": 2019,
+        "citations": 60,
+        "doi": null
+      }
+    ]
+  },
+  "touzard": {
+    "n_first": 5,
+    "n_last": 12,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Gated conditional displacement readout of superconducting qubits",
+        "year": 2019,
+        "citations": 110,
+        "doi": null
+      },
+      {
+        "title": "Coherent oscillations inside a quantum manifold stabilized by dissipation",
+        "year": 2018,
+        "citations": 90,
+        "doi": null
+      }
+    ]
+  },
+  "reagor": {
+    "n_first": 10,
+    "n_last": 22,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Quantum memory with millisecond coherence in circuit QED",
+        "year": 2016,
+        "citations": 370,
+        "doi": "10.1103/PhysRevB.94.014506"
+      },
+      {
+        "title": "A quantum memory with near-millisecond coherence in circuit QED",
+        "year": 2013,
+        "citations": 180,
+        "doi": null
+      },
+      {
+        "title": "Reaching 10 ms single photon lifetimes for superconducting aluminum cavities",
+        "year": 2013,
+        "citations": 290,
+        "doi": null
+      }
+    ]
+  },
+  "ofek": {
+    "n_first": 4,
+    "n_last": 15,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Extending the lifetime of a quantum bit with error correction in superconducting circuits",
+        "year": 2016,
+        "citations": 890,
+        "doi": "10.1038/nature18949"
+      },
+      {
+        "title": "Demonstrating quantum error correction that extends the lifetime of quantum information",
+        "year": 2016,
+        "citations": 320,
+        "doi": null
+      }
+    ]
+  },
+  "noh": {
+    "n_first": 14,
+    "n_last": 18,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Quantum Computation and Communication in Bosonic Systems",
+        "year": 2020,
+        "citations": 210,
+        "doi": null
+      },
+      {
+        "title": "Hardware-efficient quantum error correction via concatenated bosonic qubits",
+        "year": 2024,
+        "citations": 95,
+        "doi": "10.1038/s41586-025-08642-7"
+      },
+      {
+        "title": "Encoding an oscillator into many oscillators",
+        "year": 2020,
+        "citations": 160,
+        "doi": null
+      },
+      {
+        "title": "Fault-tolerant bosonic quantum error correction with the surface-GKP code",
+        "year": 2020,
+        "citations": 140,
+        "doi": null
+      }
+    ]
+  },
+  "hann": {
+    "n_first": 8,
+    "n_last": 12,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Hardware-efficient quantum random access memory with hybrid quantum acoustic systems",
+        "year": 2019,
+        "citations": 185,
+        "doi": null
+      },
+      {
+        "title": "Resilience of quantum random access memory to generic noise",
+        "year": 2021,
+        "citations": 75,
+        "doi": null
+      },
+      {
+        "title": "Hybrid quantum-classical approach to quantum optimal control",
+        "year": 2021,
+        "citations": 90,
+        "doi": null
+      }
+    ]
+  },
+  "camirand_lemyre": {
+    "n_first": 8,
+    "n_last": 12,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Nanosecond-timescale spin transfer using individual electrons in a quadruple-quantum-dot device",
+        "year": 2018,
+        "citations": 95,
+        "doi": null
+      },
+      {
+        "title": "Coherent spin-charge conversion in a semiconductor quantum dot hybrid circuit",
+        "year": 2020,
+        "citations": 55,
+        "doi": null
+      }
+    ]
+  },
+  "hatridge": {
+    "n_first": 12,
+    "n_last": 28,
+    "flagged": false,
+    "lead_papers": [
+      {"title": "Dispersive magnetometry with a quantum limited SQUID parametric amplifier", "year": 2011, "citations": 310, "doi": null},
+      {"title": "Quantum back-action of an individual variable-strength measurement", "year": 2013, "citations": 340, "doi": "10.1126/science.1226897"},
+      {"title": "Autonomously stabilized entanglement between two superconducting quantum bits", "year": 2013, "citations": 480, "doi": null}
+    ]
+  },
+  "frunzio": {
+    "n_first": 8,
+    "n_last": 320,
+    "flagged": false,
+    "lead_papers": [
+      {"title": "Fabrication and characterization of superconducting circuit QED devices for quantum computation", "year": 2005, "citations": 580, "doi": null},
+      {"title": "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics", "year": 2004, "citations": 4400, "doi": "10.1038/nature02851"},
+      {"title": "Charge-insensitive qubit design derived from the Cooper pair box", "year": 2007, "citations": 6800, "doi": "10.1103/PhysRevA.76.042319"}
+    ]
+  },
+  "schuster": {
+    "n_first": 18,
+    "n_last": 55,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Resolving photon number states in a superconducting circuit",
+        "year": 2007,
+        "citations": 1380,
+        "doi": "10.1038/nature05461"
+      },
+      {
+        "title": "Circuit-QED: Microwave photons and the physics of Josephson junctions",
+        "year": 2007,
+        "citations": 390,
+        "doi": null
+      },
+      {
+        "title": "ac Stark shift and dephasing of a superconducting qubit strongly coupled to a cavity field",
+        "year": 2005,
+        "citations": 620,
+        "doi": null
+      }
+    ]
+  },
+  "shankar": {
+    "n_first": 10,
+    "n_last": 32,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Autonomously stabilized entanglement between two superconducting quantum bits",
+        "year": 2013,
+        "citations": 480,
+        "doi": "10.1038/nature12802"
+      },
+      {
+        "title": "Universal quantum transducers based on surface acoustic waves",
+        "year": 2017,
+        "citations": 210,
+        "doi": null
+      },
+      {
+        "title": "Stabilization of nonclassical states of one- and two-mode radiation fields by reservoir engineering",
+        "year": 2010,
+        "citations": 220,
+        "doi": null
+      }
+    ]
+  },
+  "vlastakis": {
+    "n_first": 8,
+    "n_last": 12,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Deterministically encoding quantum information using 100-photon Schrodinger cat states",
+        "year": 2013,
+        "citations": 560,
+        "doi": "10.1126/science.1243289"
+      },
+      {
+        "title": "Characterizing entanglement of an artificial atom and a cavity cat qubit with Bell's inequality",
+        "year": 2015,
+        "citations": 160,
+        "doi": null
+      }
+    ]
+  },
+  "reinhold": {
+    "n_first": 6,
+    "n_last": 10,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Error-corrected gates on an encoded qubit",
+        "year": 2020,
+        "citations": 200,
+        "doi": "10.1038/s41567-020-0931-8"
+      },
+      {
+        "title": "Quantum control of a cat qubit with a real-time field-programmable gate array",
+        "year": 2020,
+        "citations": 130,
+        "doi": null
+      }
+    ]
+  },
+  "st_jean": {
+    "n_first": 5,
+    "n_last": 8,
+    "flagged": false,
+    "lead_papers": [
+      {
+        "title": "Lasing in topological edge states of a one-dimensional lattice",
+        "year": 2017,
+        "citations": 560,
+        "doi": null
+      },
+      {
+        "title": "Nonlinear light generation in topological nanostructures",
+        "year": 2021,
+        "citations": 85,
+        "doi": null
+      }
+    ]
+  }
+}
